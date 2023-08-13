@@ -4,7 +4,6 @@ Welcome to the Algo Trader setup scirpt! This script helps you setup the project
 ## Installation
 
 
-markdown
 
 # Warframe Algo Trader
 
