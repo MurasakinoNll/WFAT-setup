@@ -15,12 +15,11 @@ Welcome to the Warframe Algo Trader! This script helps you automate trading acti
 
 ## Installation
 
-Run the installer script
-
-install.bat
+Run the installer script installerscript.bat
 
 Follow the prompts to complete the installation. The script will set up everything you need.
-Usage
+
+Usage:
 
     Run the installer script install.bat. This will automatically install all the necessary dependencies and set up the application.
 
@@ -36,8 +35,7 @@ Usage
 
 Known Issues
 
-    Some users have reported issues with Node.js and npm installation. If you encounter problems, please try installing them manually and re-run the script.
-    The script may not work with browsers other than Chrome and Firefox.
+    Some issues with Node.js and npm installation are present where running the script twice is neccesary to proceed after npm finishes. If you encounter the problem again after using the script multiple times, please try installing them manually then re-runing the script.
     If you encounter any other issues or have questions, feel free to submit an issue on GitHub.
 
 Contributing
