@@ -6,11 +6,6 @@ Welcome to the Warframe Algo Trader! This script helps you automate trading acti
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/akmayer/Warframe-Algo-Trader.git
-cd Warframe-Algo-Trader
-
-Certainly, here's the modified README.md with the requested changes:
 
 markdown
 
@@ -20,15 +15,7 @@ Welcome to the Warframe Algo Trader! This script helps you automate trading acti
 
 ## Installation
 
-1. Clone the repository:
-
-```bash
-git clone https://github.com/akmayer/Warframe-Algo-Trader.git
-cd Warframe-Algo-Trader
-
-    Run the installer script:
-
-batch
+Run the installer script
 
 install.bat
 
