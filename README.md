@@ -1,10 +1,7 @@
-# Warframe Algo Trader
+# Warframe Algo Trader setup script
 
-Welcome to the Warframe Algo Trader! This script helps you automate trading activities on the Warframe Market platform.
-
+Welcome to the Algo Trader setup scirpt! This script helps you setup the project akmayer from https://github.com/akmayer/Warframe-Algo-Trader/tree/main and install its pre-reqs for you.
 ## Installation
-
-1. Clone the repository:
 
 
 markdown
