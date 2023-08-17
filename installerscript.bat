@@ -1,34 +1,6 @@
 @echo off
 setlocal
 
-REM Install Python 3.11
-python --version 2>&1 | findstr /I "3.11"
-if %ERRORLEVEL% NEQ 0 (
-    echo Python 3.11 is not installed. Please install Python 3.11 from the official website.
-    exit /b 1
-)
-
-REM Install Git
-where git > nul 2>&1
-if %ERRORLEVEL% NEQ 0 (
-    echo Git is not installed. Installing Git...
-    powershell -Command "Start-Process https://git-scm.com/download/win -Wait"
-)
-
-REM Install Node.js and npm
-node --version 2>&1 | findstr /I "v"
-if %ERRORLEVEL% NEQ 0 (
-    echo Node.js is not installed. Installing Node.js and npm...
-    powershell -Command "Start-Process https://nodejs.org/en/download/ -Wait"
-)
-
-REM Install Python requests library
-pip show requests | findstr /I "Name: requests"
-if %ERRORLEVEL% NEQ 0 (
-    echo Installing requests...
-    pip install requests
-)
-
 REM Set the installation directory to the user's home directory
 set "repo_dir=%USERPROFILE%\algo-trader"
 mkdir "%repo_dir%" 2>nul
@@ -42,10 +14,16 @@ if exist "%repo_dir%\Warframe-Algo-Trader" (
     git clone https://github.com/akmayer/Warframe-Algo-Trader
 )
 
-REM Install Python dependencies
+REM Install Python 3.11
+echo Installing Python 3.11...
+start /wait "" "https://www.python.org/ftp/python/3.11.0/python-3.11.0-amd64.exe" /quiet
+
+REM Activate Python virtual environment
 cd "%repo_dir%\Warframe-Algo-Trader"
 python -m venv venv
 call venv\Scripts\activate
+
+REM Install required Python packages
 python -m pip install -r requirements.txt
 
 REM Remove the existing config.json file (if it exists)
@@ -92,6 +70,9 @@ REM Create config.json
 
 echo Installation completed successfully!
 pause
+
+REM Deactivate Python virtual environment
+deactivate
 
 REM Restore the previous environment
 endlocal
